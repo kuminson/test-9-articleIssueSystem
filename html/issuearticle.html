@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文章发布系统</title>
+	<link rel="stylesheet" type="text/css" href="/css/issuearticle.css">
+</head>
+<body>
+	<div class="header">
+		<h1>文章发布系统</h1>
+	</div>
+	<div class="main">
+		<ul class="m_nav">
+			<li class="mn_texttitle"><a href="#">发布文章</a></li>
+			<li class="mn_texttitle"><a href="#">管理文章</a></li>
+		</ul>
+		<form action="#" class="m_form">
+			<h2>发布文章</h2>
+			<ul class="mf_ul">
+				<li><label class="mful_title" for="title">标题:</label><input class="mful_text" type="text" name="title"></li>
+				<li><label class="mful_title" for="author">作者:</label><input class="mful_text" type="text" name="author"></li>
+				<li>
+					<label class="mful_title" for="intro">简介:</label>
+					<textarea class="mful_text" name="intro" id="intro" cols="30" rows="3"></textarea>
+				</li>
+				<li>
+					<label class="mful_title" for="content">内容:</label>
+					<textarea class="mful_text" name="content" id="content" cols="30" rows="7"></textarea>
+				</li>
+			</ul>
+			<button class="mf_sub" type="submit">提交</button>
+			<button class="mf_res" type="reset">重置</button>
+		</form>
+	</div>
+	<div class="footer">
+		国家准字号
+	</div>
+</body>
+</html>
