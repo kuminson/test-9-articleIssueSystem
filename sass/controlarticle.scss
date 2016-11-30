@@ -1,0 +1,33 @@
+@import "module";
+
+$center_line: 2px;   //分隔线宽
+$cell_height: 30px;   //表格单元高度
+$cell_width: (20% 50% 30%);    //表格单元宽度
+
+@mixin cell{
+	border: 1px solid #AAA;
+	height: $cell_height;
+	line-height: $cell_height;
+	text-align: center;
+	font-size: 16px;
+}
+
+// 主体
+.m_table{
+	width: $max_width - $nav_width - $center_line;
+	float: right;
+	background-color: #FFF;
+}
+.m_table thead th{
+	font-size: 20px;
+	font-weight: bold;
+	height: $cell_height * 1.5;
+}
+.m_table th,.m_table td{
+	@include cell;
+}
+@for $i from 1 through 3 {
+	.m_table th:nth-of-type(#{$i}){
+		width: nth($cell_width,$i);
+	}
+}

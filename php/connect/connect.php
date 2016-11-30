@@ -13,7 +13,7 @@
 		echo mysqli_error();
 	}
 	// 字符集
-	if(!(mysqli_query($con,'SET NAMES gbk'))){
+	if(!(mysqli_query($con,'SET NAMES utf8'))){
 		echo '<br/>';
 		echo '修改字符集失败';
 		echo mysqli_error();

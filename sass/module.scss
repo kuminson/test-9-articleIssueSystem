@@ -1,0 +1,61 @@
+@import "compass/reset";
+
+@import "compass/css3";
+@import "compass";
+
+// 浏览器支持
+$browser-minimum-versions:("ie","6");
+
+$max_width:1000px;  // 最大宽度
+$header_height: 100px;   //头部高度
+$nav_width: 200px;      //导航条宽度
+$obligate_height: 9999px;   //预留高度
+
+// 居中
+@mixin center($width:$max_width){
+	width: $width;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+// 头部
+.header{
+	@include center();
+	height: $header_height;
+	background-color: cyan;
+}
+.header h1{
+	height: $header_height;
+	line-height: $header_height;
+	text-align: center;
+	font-size: 22px;
+	font-weight: bold;
+	letter-spacing: 4px;
+}
+
+// 主体
+.main{
+	@include center();
+	overflow: hidden;
+	background-color: #CCC;
+}
+.m_nav{
+	width: $nav_width;
+	padding-bottom: $obligate_height;
+	margin-bottom: -$obligate_height;
+	background-color: pink;
+	float: left;
+}
+.m_nav li{
+	margin-top: 20px;
+	text-align: center;
+}
+
+// 脚部
+.footer{
+	@include center();
+	height: $header_height;
+	background-color: yellow;
+	text-align: center;
+	line-height: $header_height;
+}

@@ -1,15 +1,5 @@
-@import "compass/reset";
+@import "module";
 
-@import "compass/css3";
-@import "compass";
-
-// 浏览器支持
-$browser-minimum-versions:("ie","6");
-
-$max_width:1000px;  // 最大宽度
-$header_height: 100px;   //头部高度
-$nav_width: 200px;      //导航条宽度
-$obligate_height: 9999px;   //预留高度
 $center_line: 2px;   //分隔线宽
 $h2_padding: 20px;   //h2上下间距
 $label_width: 50px;     //label宽度
@@ -17,47 +7,10 @@ $input_width: 300px;     //input宽度
 $form_line:20px;        //form间距
 $button_width:80px;     //按钮宽度
 
-// 居中
-@mixin center($width:$max_width){
-	width: $width;
-	margin-right: auto;
-	margin-left: auto;
-}
-
-// 头部
-.header{
-	@include center();
-	height: $header_height;
-	background-color: cyan;
-}
-.header h1{
-	height: $header_height;
-	line-height: $header_height;
-	text-align: center;
-	font-size: 22px;
-	font-weight: bold;
-	letter-spacing: 4px;
-}
 
 // 主体
-.main{
-	@include center();
-	overflow: hidden;
-	background-color: #CCC;
-}
-.m_nav{
-	width: $nav_width;
-	padding-bottom: $obligate_height;
-	margin-bottom: -$obligate_height;
-	background-color: pink;
-	float: left;
-}
-.m_nav li{
-	margin-top: 20px;
-	text-align: center;
-}
 .m_form{
-	width: 1000px - $nav_width - $center_line;
+	width: $max_width - $nav_width - $center_line;
 	float: right;
 	background-color: #FFF;
 }
@@ -86,18 +39,11 @@ $button_width:80px;     //按钮宽度
 }
 .mf_sub{
 	width: $button_width;
-	margin-left: (1000px -($label_width + $input_width + $form_line) - $button_width * 2) / 2 + (($label_width + $input_width + $form_line) - $button_width * 2) / 3 ;
+	margin-left: ($max_width -($label_width + $input_width + $form_line) - $button_width * 2) / 2 + (($label_width + $input_width + $form_line) - $button_width * 2) / 3 ;
+	margin-bottom: 20px;
 }
 .mf_res{
 	width: $button_width;
 	margin-left: (($label_width + $input_width + $form_line) - $button_width * 2) / 3 ;
-}
-
-// 脚部
-.footer{
-	@include center();
-	height: $header_height;
-	background-color: yellow;
-	text-align: center;
-	line-height: $header_height;
+	margin-bottom: 20px;
 }

@@ -87,42 +87,28 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   text-align: center;
   line-height: 100px; }
 
-.m_form {
+.m_table {
   width: 798px;
   float: right;
   background-color: #FFF; }
 
-.m_form h2 {
+.m_table thead th {
+  font-size: 20px;
+  font-weight: bold;
+  height: 45px; }
+
+.m_table th, .m_table td {
+  border: 1px solid #AAA;
   height: 30px;
+  line-height: 30px;
   text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  font-size: 18px; }
+  font-size: 16px; }
 
-.mf_ul {
-  width: 370px;
-  margin-right: auto;
-  margin-left: auto; }
+.m_table th:nth-of-type(1) {
+  width: 20%; }
 
-.mf_ul li {
-  margin-bottom: 20px;
-  overflow: hidden; }
+.m_table th:nth-of-type(2) {
+  width: 50%; }
 
-.mful_title {
-  width: 50px;
-  text-align: right;
-  float: left; }
-
-.mful_text {
-  width: 300px;
-  float: right; }
-
-.mf_sub {
-  width: 80px;
-  margin-left: 305px;
-  margin-bottom: 20px; }
-
-.mf_res {
-  width: 80px;
-  margin-left: 70px;
-  margin-bottom: 20px; }
+.m_table th:nth-of-type(3) {
+  width: 30%; }

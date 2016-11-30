@@ -7,18 +7,19 @@
 </head>
 <body>
 	<div id="main" class="main">
-		<form action="/php/add_article_handle.php" method="POST" name="article" class="m_form">
-			<h2>发布文章</h2>
+		<form action="/php/change_article_handle.php" method="POST" name="article" class="m_form">
+			<input id="id" type="hidden" name="id">
+			<h2>修改文章</h2>
 			<ul class="mf_ul">
-				<li><label class="mful_title" for="title">标题:</label><input class="mful_text" type="text" name="title"></li>
-				<li><label class="mful_title" for="author">作者:</label><input class="mful_text" type="text" name="author"></li>
+				<li><label class="mful_title" for="title">标题:</label><input id="title" class="mful_text" type="text" name="title"></li>
+				<li><label class="mful_title" for="author">作者:</label><input id="author" class="mful_text" type="text" name="author"></li>
 				<li>
 					<label class="mful_title" for="intro">简介:</label>
-					<textarea class="mful_text" name="intro" id="intro" cols="30" rows="3"></textarea>
+					<textarea id="intro" class="mful_text" name="intro" id="intro" cols="30" rows="3"></textarea>
 				</li>
 				<li>
 					<label class="mful_title" for="content">内容:</label>
-					<textarea class="mful_text" name="content" id="content" cols="30" rows="7"></textarea>
+					<textarea id="content" class="mful_text" name="content" id="content" cols="30" rows="7"></textarea>
 				</li>
 			</ul>
 			<button class="mf_sub" type="submit">提交</button>
@@ -30,5 +31,7 @@
 	<script type="text/javascript" src="https://cdn.staticfile.org/jquery/1.11.1/jquery.min.js"></script>
 	<!-- 引入模块js文件 -->
 	<script type="text/javascript" src="/js/module.js"></script>
+	<!-- 引入js文件 -->
+	<script type="text/javascript" src="/js/changearticle.js"></script>
 </body>
 </html>
